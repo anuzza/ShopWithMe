@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialBtnState = {showCart: false};
+const initialBtnState = {showCart: false, notification: null};
 
 const cartBtnSlice= createSlice({
     name: 'cartBtn',
@@ -8,7 +8,13 @@ const cartBtnSlice= createSlice({
     reducers:{
         btnClicked(state){
             state.showCart= !state.showCart;
+        },
+        showNotification(state, action){
+            state.notification= {status: action.payload.status, title: action.payload.title, message: action.payload.message }
+
+
         }
+
         
     }
 });
