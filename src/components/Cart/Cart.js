@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 const Cart = (props) => {
 
   const cartItems = useSelector((state)=>state.cartItem.items);
-
   
 
 
